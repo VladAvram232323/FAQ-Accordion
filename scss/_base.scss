@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(0deg, hsl(240, 73%, 65%), hsl(273, 75%, 66%));
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: var(--default-font);
+}

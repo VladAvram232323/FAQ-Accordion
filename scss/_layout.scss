@@ -1,0 +1,147 @@
+.container {
+  position: relative;
+}
+
+.card {
+  height: 52rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100rem;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  width: 70rem;
+  height: 70rem;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: translateX(-44%);
+}
+
+.img {
+  position: relative;
+
+  &__woman {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-16.5%, -50%);
+  }
+}
+
+.img__box {
+  z-index: 1;
+  position: absolute;
+  top: 42%;
+  left: -9.3%;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 4rem 3rem 0;
+
+  &__title {
+    color: var(--very-dark-desaturated-blue);
+    font-size: 3.2rem;
+  }
+
+  &__q {
+    border-bottom: 1px solid var(--light-grayish-blue);
+
+    &--q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--very-dark-grayish-blue);
+      margin-bottom: 1.5rem;
+      transition: all 0.25s;
+
+      h3 {
+        font-weight: 400;
+      }
+    }
+
+    &--q:hover {
+      cursor: pointer;
+      color: var(--soft-red);
+    }
+
+    &--a {
+      color: var(--dark-grayish-blue);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.faq__q--a {
+  display: none;
+}
+
+img {
+  transform: rotate(0deg);
+  transition: all 0.25s ease-in;
+}
+
+.active img {
+  transform: rotate(180deg);
+  transition: all 0.25s ease-in;
+}
+
+.active h3 {
+  font-weight: 700;
+}
+
+.active .faq__q--a {
+  display: block;
+}
+
+@media screen and (max-width: 1065px) {
+  .card {
+    grid-template-columns: 1fr;
+    height: 52rem;
+    gap: 4rem;
+    width: 100rem;
+    overflow: visible;
+  }
+
+  .img {
+    position: relative;
+
+    &__woman {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .img__box {
+    z-index: 1;
+    position: absolute;
+    top: -10%;
+    left: 30%;
+  }
+
+  .card:before {
+    width: 47rem;
+    height: 47rem;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: translate(55%, -50%);
+  }
+
+  .faq__title {
+    text-align: center;
+  }
+}
