@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ accordion card
 
+live project: https://lambent-vacherin-5023a6.netlify.app/
+
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
